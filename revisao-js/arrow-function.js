@@ -51,3 +51,4 @@ console.log(somavet2([12, 42, -11, 20, 9, 16]))
 // CONCLUSÃO: Arrow functions foram concebidas para facilitar a escrita de 
 // funções de apenas uma linha, embora também possa ser usadas para funções de múltiplas linhas.7
 
+let a = 10
