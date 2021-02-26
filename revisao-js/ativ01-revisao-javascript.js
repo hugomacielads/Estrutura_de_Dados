@@ -30,12 +30,87 @@ estadosNe.push(estado1)
    1) Crie objetos para os demais Estados, segundo o modelo acima, e acrescente-os
       ao vetor estadosNe usando push().
 */
+let estado2 = {
+   nome: 'Alagoas',
+   sigla: 'AL',
+   area: 27848.14,
+   populacao: 3322820
+}
+
+estadosNe.push(estado2)
+
+let estado3 = {
+   nome: 'Rio Grande do Norte',
+   sigla: 'RN',
+   area: 52811.05,
+   populacao: 3479010
+}
+
+estadosNe.push(estado3)
+
+let estado4  = {
+   nome: 'Paraíba',
+   sigla: 'PB',
+   area: 56469.78,
+   populacao: 3996496
+}
+
+estadosNe.push(estado4)
+
+let estado5  = {
+   nome: 'Pernambuco',
+   sigla: 'PE',
+   area: 98148.32,
+   populacao: 9496294
+}
+
+estadosNe.push(estado5)
+
+let estado6  = {
+   nome: 'Ceará',
+   sigla: 'CE',
+   area: 148920.20,
+   populacao: 9075649
+}
+
+estadosNe.push(estado6)
+
+let estado7  = {
+   nome: 'Piauí',
+   sigla: 'PI',
+   area: 251577.74,
+   populacao: 3264531
+}
+
+estadosNe.push(estado7)
+
+let estado8  = {
+   nome: 'Maranhão',
+   sigla: 'MA',
+   area: 331937.45,
+   populacao: 7035055
+}
+
+estadosNe.push(estado8)
+
+let estado9  = {
+   nome: 'Bahia',
+   sigla: 'BA',
+   area: 564733.18,
+   populacao: 14812617
+}
+
+estadosNe.push(estado9)
+
 
 /*
    2) Escreva uma arrow function que receba dois parâmetros, área e população, e
       calcule a densidade demográfica retornando o resultado da divisão da
       segunda pela primeira. 
 */
+
+let densidade = (area, populacao) => populacao / area
+
 
 /*
    3) Percorra o vetor estadosNe usando um for tradicional. Para cada estado,
@@ -46,6 +121,13 @@ estadosNe.push(estado1)
       Durante este mesmo loop, elimine a propriedade 'sigla' dos objetos.
 
 */
+
+for(let i = 0; i < estadosNe.length; i ++) {
+    let result = densidade(estadosNe[i])
+    estadosNe['densidade demográfica'] = result
+    console.log(result)
+}
+
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
