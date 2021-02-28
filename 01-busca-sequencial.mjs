@@ -125,6 +125,10 @@ console.time('Buscando ORKUTILSON')
 console.log(buscaSequencial(nomes, 'ORKUTILSON') >= 0)
 console.timeEnd('Buscando ORKUTILSON')
 
+console.time('Buscando ROQUELAND')
+console.log(buscaSequencial(nomes, 'ROQUELAND') >= 0)
+console.timeEnd('Buscando ROQUELAND')
+
 // MORAL DA HISTORIA
 // Vamos aprender a melhorar o tempo de resposta do código com o banco de dados
 
