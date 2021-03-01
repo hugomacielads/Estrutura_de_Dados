@@ -123,29 +123,49 @@ let densidade = (area, populacao) => populacao / area
 */
 
 for(let i = 0; i < estadosNe.length; i ++) {
-    let result = densidade(estadosNe[i])
-    estadosNe['densidade demográfica'] = result
-    console.log(result)
+    estadosNe[i].densidade = densidade(estadosNe[i].area, estadosNe[i].populacao)
 }
 
+console.table(estadosNe)
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
 
 */
 
+let propriedades = (objeto) => {
+    for (const i in objeto) {
+        console.log(i + " corresponde à: " + objeto[i])
+    }
+}
+
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
 
+*/
+
+for (let objeto of estadosNe) {
+    propriedades(objeto)
+}
+ 
 /*
+
    6)
       a) Declare um vetor vazio.
-      b) Insira no vetor criado no item a) apenas o nome de cada Estado, conforme
-         os dados no topo deste arquivo, um de cada vez. Faça as inserções de 
-         modo que o vetor final esteja em ordem alfabética. No caso, o primeiro 
-         Estado (Sergipe), pode ser inserido com push(), mas o segundo (Alagoas)
-         deve ser inserido com unshift(), para manter a ordem alfabética. 
-         O terceiro Estado (Rio Grande do Norte) deve ser inserido entre os dois 
-         já existentes, e assim por diante.
+      b) Insira no vetor criado no item 
+      a) apenas o nome de cada Estado, conforme os dados no topo deste arquivo, um de cada vez. 
+        Faça as inserções de modo que o vetor final esteja em ordem alfabética.
+        No caso, o primeiro Estado (Sergipe), pode ser inserido com push(), 
+        mas o segundo (Alagoas) deve ser inserido com unshift(), para manter a ordem alfabética. 
+        O terceiro Estado (Rio Grande do Norte) deve ser inserido entre os dois já existentes, e assim por diante.
 
 */
+
+let nome_estados = []
+
+
+nome_estados.unshift(estadosNe[1].nome)
+nome_estados.splice(2,0,estadosNe[8].nome, estadosNe[5].nome, estadosNe[7].nome, estadosNe[3].nome,estadosNe[4].nome,estadosNe[6].nome, estadosNe[2].nome)
+nome_estados.push(estadosNe[0].nome)
+
+console.table(nome_estados)
