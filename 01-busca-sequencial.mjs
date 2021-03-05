@@ -11,11 +11,10 @@
  */
 
  function buscaSequencial (vetor, valorBusca) {
-     for(let i = 0; i < vetor.length; i++) {
-         if(vetor[i] === valorBusca) return i // Retorna a posição onde foi encontrado 
-     }
-     return -1
-}
+    for(let i = 0; i < vetor.length; i++) {
+        if(vetor[i] === valorBusca) return i // Retorna a posição onde foi encontrado 
+    }
+    return -1
 
     const primos = [
         2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73,
@@ -111,25 +110,24 @@ console.time('Buscando 3662')
 console.log(buscaSequencial(primos, 3662))
 console.timeEnd('Buscando 3662')
 
+console.log('------------------------------')
 import { nomes } from './includes/vetor-nomes.mjs' // Buscando na pasta includes, o arquivo com os nomes
 
 console.time('Buscando HUGO')
-console.log(buscaSequencial(nomes, 'HUGO') >= 0)
+console.log(buscaSequencial(nomes, 'HUGO'))
 console.timeEnd('Buscando HUGO')
 
 console.time('Buscando ZULEICA')
-console.log(buscaSequencial(nomes, 'ZULEICA') >= 0)
+console.log(buscaSequencial(nomes, 'ZULEICA'))
 console.timeEnd('Buscando ZULEICA')
 
 console.time('Buscando ORKUTILSON')
-console.log(buscaSequencial(nomes, 'ORKUTILSON') >= 0)
+console.log(buscaSequencial(nomes, 'ORKUTILSON'))
 console.timeEnd('Buscando ORKUTILSON')
 
 console.time('Buscando ROQUELAND')
-console.log(buscaSequencial(nomes, 'ROQUELAND') >= 0)
+console.log(buscaSequencial(nomes, 'ROQUELAND'))
 console.timeEnd('Buscando ROQUELAND')
 
 // MORAL DA HISTORIA
-// Vamos aprender a melhorar o tempo de resposta do código com o banco de dados
-
-
+// Vamos aprender a melhorar o tempo de resposta do código com o banco de
