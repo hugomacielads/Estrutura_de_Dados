@@ -18,7 +18,7 @@ let trocas, pass, comps
     function encontrarMenor(inicio) {
         let menor = inicio
         // Este loop vai até a última posição
-        for(let j = inicio + 1; j < vetor.length; j++) {
+        for(let j = inicio + 1 ; j < vetor.length; j++) {
             if (vetor[j] < vetor[menor]) menor = j
             comps++
         }
