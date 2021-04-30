@@ -8,7 +8,6 @@
     p -> Pivô que na primeira passada será igual o último elemento do vetor
     q -> Variável de divisão do vetor em 2 partes
     i -> Variável auxiliar para percorrer o vetor
-    
 
 */
 function k(m, fnComp, n, o) {
@@ -23,12 +22,13 @@ function k(m, fnComp, n, o) {
         }
     }
     q++
-    if(m[p] < m[q]) [ m[p], m[q] ] = [ m[q], m[p] ]
+    //if(m[p] < m[q]) [ m[p], m[q] ] = [ m[q], m[p] ]
+    if(fnComp(m[q] < m[p])) [ m[p], m[q] ] = [ m[q], m[p] ]
     k(m, fnComp, n, q - 1)
     k(m, fnComp, q + 1, o)
 }
 
-import { countries } from './countries.mjs'
+import { countries } from './prova1/countries.mjs'
 
 k(countries, (a, b) => {
     if(a.continent === b.continent) {
