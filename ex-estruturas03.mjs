@@ -13,4 +13,37 @@
 
     Data de entrega: 31/05, até 20h50, valendo nota de participação
 */
+import { LinkedList } from './lib/LinkedList.mjs'
 
+let lista = new LinkedList()
+
+function listaCrescente(num) {
+    let numAnt, proxNum, pos
+
+    if(lista.empty) {
+        lista.insertHead(num)      // Inserindo o primeiro número na lista
+    }
+
+    else if(lista.peekHead() > num) {
+        lista.insertHead(num)       // Caso o número seja maior que o primeiro da lista
+    }
+
+    else if(lista.peekHead() < num) {
+        pos += 1
+        lista.insert(pos, num)      // Rodar um for para encontrar em qual posição está o valor que é menor que o inserido
+    }
+
+    return lista.print()
+}
+
+let numero = listaCrescente(25)
+console.log(lista.print())
+
+numero = listaCrescente(14)
+console.log(lista.print())
+
+numero = listaCrescente(19)
+console.log(lista.print())
+
+numero = listaCrescente(3)
+console.log(lista.print())
