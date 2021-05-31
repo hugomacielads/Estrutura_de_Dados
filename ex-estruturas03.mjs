@@ -18,19 +18,23 @@ import { LinkedList } from './lib/LinkedList.mjs'
 let lista = new LinkedList()
 
 function listaCrescente(num) {
-    let numAnt, proxNum, pos
 
     if(lista.empty) {
         lista.insertHead(num)      // Inserindo o primeiro número na lista
     }
-
-    else if(lista.peekHead() > num) {
-        lista.insertHead(num)       // Caso o número seja maior que o primeiro da lista
-    }
-
-    else if(lista.peekHead() < num) {
-        pos += 1
-        lista.insert(pos, num)      // Rodar um for para encontrar em qual posição está o valor que é menor que o inserido
+    else {
+        let i = 0
+        while(i <= lista.count) {       // Enquanto o valor de i for menor que o tamanho da lista
+            if (num < lista.peek(i)) {  // Se o número for menor que o número da posição i
+                lista.insert(i, num)    // Inserir na posição i o valor de num
+                break
+            }
+            else if (i == lista.count - 1) {    // Se o valor de i chegar na última posição
+                lista.insertTail(num)           // Inserir o valor no final da lista
+                break
+            }
+            i++
+        }
     }
 
     return lista.print()
@@ -46,4 +50,10 @@ numero = listaCrescente(19)
 console.log(lista.print())
 
 numero = listaCrescente(3)
+console.log(lista.print())
+
+numero = listaCrescente(-7)
+console.log(lista.print())
+
+numero = listaCrescente(139)
 console.log(lista.print())
