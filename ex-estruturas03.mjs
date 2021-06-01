@@ -57,3 +57,31 @@ console.log(lista.print())
 
 numero = listaCrescente(139)
 console.log(lista.print())
+
+/*
+    import { DoublyLinkedList } from './lib/DoublyLinkedList.mjs"
+
+    const list = new DoublyLinkedList()
+
+    function insertInList(val) {
+        
+        // 1º caso: Lista vazia
+        if(list.empty) list.insertTail(val)
+
+        // 2º caso: Procurando a posição de inserção
+        else {
+            for(let i = 0; i < list.count; i ++) {
+                // Buscar o valor do nodo da posição atual
+                let valPos = list.peek(i)
+                // Compara o valor a ser inserido (val) com o valor da posição atual
+                if (val > valPos) {
+                    // Se o valor que já está na lista é MAIOR que valor inserido
+                    list.insert(i, val)
+                    return      // Sai da função
+                }
+            }
+            // Se rodamos o for sem encontrar posição é porque o nodo deve ser inserido no final
+            list.insertTail(val)
+        }
+    }
+*/
