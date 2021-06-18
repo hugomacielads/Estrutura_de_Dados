@@ -1,9 +1,12 @@
 /*
 
     1) Observe a árvore binária representada na figura "arvore.png". Responda:
-        a) Quantos níveis essa árvore possui? 6
-        b) Qual a altura da subárvore cuja raiz é 16? 4
-        c) Qual a profundidade do nodo de valor 29? 5
+        a) Quantos níveis essa árvore possui?
+            6 níveis.
+        b) Qual a altura da subárvore cuja raiz é 16? 
+            h = 4
+        c) Qual a profundidade do nodo de valor 29? 
+            p = 5
 
     2) Monte em código, neste arquivo, a árvore representada na figura.
 
@@ -22,14 +25,14 @@ arvore.insert(99)
 arvore.insert(1)
 arvore.insert(14)
 arvore.insert(35)
-arvore.insert(60)
+arvore.insert(58)
 arvore.insert(79)
 arvore.insert(92)
-arvore.insert(20)
-arvore.insert(43)
-arvore.insert(58)
-arvore.insert(86)
 arvore.insert(29)
+arvore.insert(43)
+arvore.insert(60)
+arvore.insert(86)
+arvore.insert(20)
 
 let percursoEmOrdem = []
 arvore.inOrderTraversal(val => percursoEmOrdem.push(val))
